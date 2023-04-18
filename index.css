@@ -1,0 +1,28 @@
+/* 
+css: cascading style sheet
+    style the html pages
+
+    syntax:
+    selector{
+        attribute: value;
+        attributes: values
+        color: 'red';
+    }
+
+    selector: all the html element, class, id
+    types:
+    1. element selector: all the html elements eg. p, heading, form, table,div, span
+    2. class selector: user defined classes
+                       start with dot(.)
+                       multiple classes is possible in class
+    3. id selector: user defined id's
+                    start with hash(#)
+                    only single id/unique id name is possible
+
+    PRIORITY:
+    id > class > element
+
+
+
+
+*/
