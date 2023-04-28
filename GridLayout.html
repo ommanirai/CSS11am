@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 35px 200px 200px 35px;
+            grid-template-columns: auto auto auto;
+        }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: aqua;
+            /* padding: 10px; */
+        }
+        .left{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: blue;
+        }
+        .right-top{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: yellowgreen;
+        }
+        .right-bottom-left{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: violet;
+        }
+        .right-bottom-right{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color:tomato;
+        }
+        .footer{
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: springgreen;
+            /* padding: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="footer">footer</div>
+        <div class="left">left</div>
+        <div class="right-top">right top</div>
+        <div class="right-bottom-left">right bottom left</div>
+        <div class="right-bottom-right">right bottom right</div>
+    </div>
+</body>
+
+</html>
