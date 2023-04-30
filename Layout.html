@@ -22,6 +22,27 @@
             justify-content: space-evenly;
 
         }
+        .sub-category{
+            display: none;
+        }
+        .menu-item li{
+            position: relative;
+        }
+        .menu-item li:hover .sub-category{
+            display: block;
+            position: absolute;
+            left: 0;
+            padding: 0;
+            background-color: turquoise;
+        }
+        .sub-category li{
+            padding: 10px;
+        }
+        .sub-category li:hover{
+            background-color: yellow;
+        }
+
+
         li:hover{
             color: blue;
             font-weight: bold;
@@ -33,7 +54,7 @@
         }
         .left{
             width: 25%;
-            height: 390px;
+            height: 585px;
             background-color: blue;
         }
         .right{
@@ -41,7 +62,7 @@
         }
         .right-top{
             width: 100%;
-            height: 195px;
+            height: 292px;
             background-color: blueviolet;
         }
         .right-bottom{
@@ -50,11 +71,11 @@
         .right-bottom-left{
             width: 50%;
             background-color: yellow;
-            height: 195px;
+            height: 292px;
         }
         .right-bottom-right{
             width: 50%;
-            height: 195px;
+            height: 292px;
             background-color: turquoise;
         }
         .footer{
@@ -63,14 +84,58 @@
             background-color:brown;
             padding: 10px;
         }
+        .sub-sub-category{
+            display: none;
+        }
+        .sub-category li{
+            position: relative;
+        }
+        .sub-category li:hover .sub-sub-category{
+            display: block;
+            position: absolute;
+            background-color: chartreuse;
+            top: 0;
+            left: 100%;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <ul>
+            <ul class="menu-item">
                 <li>Home</li>
-                <li>Products</li>
+                <li>Products
+                    <ul class="sub-category">
+                        <li>Laptops
+                            <ul class="sub-sub-category">
+                                <li>Dell</li>
+                                <li>Acer</li>
+                                <li>Asus</li>
+                                <li>Apple</li>
+                                <li>Lenovo</li>
+                            </ul>
+                        </li>
+                        <li>Mobiles
+                            <ul class="sub-sub-category">
+                                <li>Samsung</li>
+                                <li>Apple</li>
+                                <li>xiamoi</li>
+                                <li>Huwawei</li>
+                                <li>Real Me</li>
+                                <li>RedMe</li>
+                            </ul>
+                        </li>
+                        <li>Camera
+                            <ul class="sub-sub-category">
+                                <li>Nikon</li>
+                                <li>Canon</li>
+                                <li>Sony</li>
+                                <li>Panasonic</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>Contact</li>
                 <li>About</li>
                 <li>Blogs</li>
