@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator</title>
+    <style>
+        /*
+        combinator:
+        1. grouping selector(,)
+        2. descendent selector()
+        3. child selector(>)
+        4. general siblings(~)
+        5. ajdacent siblings(+)
+        */
+        /* 1. grouping selector */
+        h1,
+        .parent1,
+        .parent2,
+        #parent3 {
+            color: red;
+        }
+
+        /*2. descendent selector */
+        .parent1 div{
+            color: aqua;
+        }
+
+        /* 3. child selector */
+        .parent1>div{
+            color: blue;
+        }
+
+        /*  4. general siblings  */
+        .grandchild1~div{
+            color: black;
+        }
+
+        /* 5. adjacent siblings */
+        .grandchild1+div {
+            color: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Heading First</h1>
+    <div class="parent1">
+        Parent1
+        <div class="child1">child 1</div>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3
+            <div class="grandchild1">grandchild 1</div>
+            <div class="grandchild2">grandchild 2</div>
+            <div class="grandchild3">grandchild 3</div>
+            <div class="grandchild4">grandchild 4</div>
+            <div class="grandchild5">grandchild 5</div>
+            <div class="grandchild6">grandchild 6</div>
+        </div>
+    </div>
+    <div class="parent2">
+        Parent2
+    </div>
+    <div id="parent3">
+        Parent3
+    </div>
+</body>
+
+</html>
