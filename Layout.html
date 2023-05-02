@@ -1,96 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Layout</title>
     <style>
-        *{
+        * {
             margin: 0;
             /* box-sizing: border-box; */
         }
-        .header{
+        .small-screen{
+            display: none;
+        }
+
+        .header {
             width: 100%;
-            height: 20px;
+            height: 40px;
             background-color: aqua;
             padding: 10px;
         }
-        ul{
+
+        ul {
             display: flex;
             list-style-type: none;
             justify-content: space-evenly;
 
         }
-        .sub-category{
+
+        .sub-category {
             display: none;
         }
-        .menu-item li{
+
+        .menu-item li {
             position: relative;
         }
-        .menu-item li:hover .sub-category{
+
+        .menu-item li:hover .sub-category {
             display: block;
             position: absolute;
             left: 0;
             padding: 0;
             background-color: turquoise;
         }
-        .sub-category li{
+
+        .sub-category li {
             padding: 10px;
         }
-        .sub-category li:hover{
+
+        .sub-category li:hover {
             background-color: yellow;
         }
 
 
-        li:hover{
+        li:hover {
             color: blue;
             font-weight: bold;
             cursor: pointer;
         }
-        .main{
+
+        .main {
             width: 100%;
             display: flex;
         }
-        .left{
+
+        .left {
             width: 25%;
-            height: 585px;
+            height: 800px;
             background-color: blue;
         }
-        .right{
+
+        .right {
             width: 75%;
         }
-        .right-top{
+
+        .right-top {
             width: 100%;
-            height: 292px;
+            height: 400px;
             background-color: blueviolet;
         }
-        .right-bottom{
+
+        .right-bottom {
             display: flex;
         }
-        .right-bottom-left{
+
+        .right-bottom-left {
             width: 50%;
             background-color: yellow;
-            height: 292px;
+            height: 400px;
         }
-        .right-bottom-right{
+
+        .right-bottom-right {
             width: 50%;
-            height: 292px;
+            height: 400px;
             background-color: turquoise;
         }
-        .footer{
+
+        .footer {
             width: 100%;
-            height: 20px;
-            background-color:brown;
+            height: 40px;
+            background-color: brown;
             padding: 10px;
         }
-        .sub-sub-category{
+
+        .sub-sub-category {
             display: none;
         }
-        .sub-category li{
+
+        .sub-category li {
             position: relative;
         }
-        .sub-category li:hover .sub-sub-category{
+
+        .sub-category li:hover .sub-sub-category {
             display: block;
             position: absolute;
             background-color: chartreuse;
@@ -98,10 +120,53 @@
             left: 100%;
             padding: 0;
         }
+
+        @media screen and (max-width: 600px) {
+            .header {
+                display: none;
+            }
+            .small-screen{
+                display: block;
+                width: 100%;
+                padding: 15px;
+                background-color: aqua;
+            }
+            .main{
+                flex-direction: column;
+            }
+            .left{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+            }
+            .right-top{
+                width: 100%;
+            }
+            .right-bottom{
+                flex-direction: column;
+            }
+            .right-bottom-left{
+                width: 100%;
+            }
+            .right-bottom-right{
+                width: 100%;
+            }
+
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
+        <select class="small-screen" name="" id="">
+            <option value="">Headers</option>
+            <option value="">Home</option>
+            <option value="">Products</option>
+            <option value="">Contact</option>
+            <option value="">About</option>
+            <option value="">Blogs</option>
+        </select>
         <div class="header">
             <ul class="menu-item">
                 <li>Home</li>
@@ -154,4 +219,5 @@
         <div class="footer">footer</div>
     </div>
 </body>
+
 </html>
