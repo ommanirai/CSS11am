@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Html</title>
+    <style>
+        form {
+            background-color: gray;
+            width: 75%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 25%;
+            /* text-align: center; */
+            margin-bottom: 15px;
+        }
+
+        input[type='text'],
+        input[type='password'],
+        input[type='number'],
+        input[type='date'],
+        input[type='email'],
+        textarea,
+        .gender-form,
+        .skill-form {
+            display: inline-block;
+            width: 70%;
+            padding: 10px;
+        }
+        input[type='search']{
+            display: inline-block;
+            width: 72%;
+            padding: 10px;
+        }
+
+        .skill-form{
+            display: inline-flex;
+            justify-content: space-evenly;
+        }
+        .button {
+            width: 40%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .msg{
+            margin-left:295px ;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .custom{
+            display: inline-block;
+        }
+        .skill{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- target: _blank, _self -->
+    <form>
+        <h2>Register Here</h2>
+        <!-- type: text, password, number, date, email, search, textarea, submit, reset, radio -->
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Enter your username here">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="enter your password here">
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="enter your age here">
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" placeholder="enter date here">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="enter your email here">
+
+        <label for="search">Search Here</label>
+        <input type="search" id="search" name="search" placeholder="Search Here">
+
+
+        <label for="gender">Gender</label>
+        <div class="gender-form">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="others">
+            <label for="others">Others</label>
+        </div>
+
+
+        <label for="skills">Skills</label>
+        <div class="skill-form">
+            <input type="checkbox"  class="custom" id="football" name="skills">
+            <label for="football" class="skill">Football</label>
+
+            <input type="checkbox" class="custom" id="basketball" name="skills">
+            <label for="basketball" class="skill">Basketball</label>
+
+            <input type="checkbox" class="custom" id="cricket" name="skills">
+            <label for="cricket" class="skill">Cricket</label>
+
+            <input type="checkbox" class="custom" id="volleyball" name="skills">
+            <label for="volleyball" class="skill">Volleyball</label>
+        </div>
+
+        <label for="description">Description</label>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+
+        <div class="button">
+            <input type="submit" value="Login">
+            <input type="reset" value="Reset">
+        </div>
+        <div class="msg">
+            Already Have an Accout? <a href="link.html">Login</a>
+        </div>
+    </form>
+</body>
+
+</html>
